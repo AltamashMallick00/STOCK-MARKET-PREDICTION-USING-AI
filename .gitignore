@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+
+# Data (Optional: keeping small sample data for demo, but usually ignored)
+# backend/data/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+upload_to_git.ps1

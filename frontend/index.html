@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockAI | Antigravity Prediction Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="loading-overlay" id="loader">
+        <span class="loader"></span>
+    </div>
+
+    <div class="container">
+        <nav class="top-nav">
+            <div class="user-profile">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Altamsh" alt="Avatar" class="avatar">
+                <div class="user-info">
+                    <span class="user-name">Altamsh Mallick & Anubha Shankar</span>
+                    <span class="user-status">Developers</span>
+                </div>
+            </div>
+            <button id="themeToggle" class="theme-btn">
+                <span class="icon">🌓</span>
+                <span class="text">Switch Theme</span>
+            </button>
+        </nav>
+
+        <header>
+            <h1>StockAI <span style="font-weight: 300;">Antigravity</span></h1>
+            <p class="subtitle">Next-Generation AI Stock Price Forecasting for MNCs</p>
+        </header>
+
+        <main class="dashboard-grid">
+            <aside class="selection-card">
+                <div class="card">
+                    <h2>Stock Selection</h2>
+                    <div class="input-group">
+                        <label for="stockSelect">Choose a MNC Dataset</label>
+                        <select id="stockSelect">
+                            <option value="" disabled selected>Select stock...</option>
+                        </select>
+                    </div>
+                    <button id="predictBtn">Run AI Prediction</button>
+                    
+                    <div class="info-section" style="margin-top: 2rem;">
+                        <div class="card engine-info">
+                            <h3>Engine Status</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">
+                                <b>Models:</b> Linear Regression + LSTM<br>
+                                <b>Forecast:</b> Next 24h & 10 Years<br>
+                                <b>Layer:</b> Antigravity Enhanced
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="prediction-view">
+                <div class="card prediction-card">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="shortTerm">Short Term (24h)</button>
+                        <button class="tab-btn" data-tab="longTerm">Long Term (10 Years)</button>
+                    </div>
+
+                    <div id="shortTermTab" class="tab-content active">
+                        <div class="stats-grid" id="statsGrid" style="display: none;">
+                            <div class="stat-item">
+                                <p class="stat-label">Linear Regression</p>
+                                <p class="stat-value" id="lrVal">$0.00</p>
+                            </div>
+                            <div class="stat-item">
+                                <p class="stat-label">LSTM Forecast</p>
+                                <p class="stat-value" id="lstmVal">$0.00</p>
+                            </div>
+                            <div class="stat-item antigravity-stat">
+                                <p class="stat-label">Antigravity Engine</p>
+                                <p class="stat-value" id="agVal">$0.00</p>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="predictionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div id="longTermTab" class="tab-content">
+                        <div class="chart-container">
+                            <canvas id="longTermChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div id="welcomeMsg" style="text-align: center; color: var(--text-muted); padding: 4rem 0;">
+                        <p>Select a stock and click "Run AI Prediction" to visualize forecasts.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>Developed by <strong>Altamsh Mallick</strong> & <strong>Anubha Shankar</strong></p>
+                <p class="copyright">All Rights Reserved @TIU2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
